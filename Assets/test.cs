@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.Video;
+using UnityEngine.UI;
 using System.Xml;
 
 public class test : MonoBehaviour {
@@ -13,9 +15,11 @@ public class test : MonoBehaviour {
     private float fixLon;
     private int mapScale;
     private float scaleFactor;
+    public Text text;
     public Transform gameobject;
+    private VideoPlayer videoPlayer;
     Quaternion rotation;
-    
+    Boolean pause;
     Vector3   startPos;
         List<Vector3> tartgetPos= new List<Vector3>();
         
@@ -29,9 +33,14 @@ public class test : MonoBehaviour {
     Vector3 relativePos;
     Vector3 temppos;
 
+    private void Awake()
+    {
+        videoPlayer = GetComponent<VideoPlayer>();
+    }
 
     void Start() {
-       // gmaeObj.transform.position = new Vector3(lonToX(114.253012),0,latToZ(22.325068));
+        // gmaeObj.transform.position = new Vector3(lonToX(114.253012),0,latToZ(22.325068));
+        pause = false;
         tartgetPos = xmlReader("Assets/SBDIV_Test.xml");
         startPos = tartgetPos[0];   
         pos = tartgetPos[PosCounter];
@@ -42,22 +51,23 @@ public class test : MonoBehaviour {
         void Update() {
 
 
+        if (pause == false)
+        {
+            timer += Time.deltaTime;
+            if (transform.position == pos)
+            {
+                //Debug.Log(transform.position);
+                startPos = pos;
+                PosCounter++;
+
+                pos = tartgetPos[PosCounter];
+                timer = 0.0f;
+            }
+            transform.position = Vector3.Lerp(startPos, pos, timer / travelTime);
+            transform.rotation = Quaternion.LookRotation(tartgetPos[PosCounter + 5]) * Quaternion.Euler(0.0f, -80, 0.0f);
+        }
 
 
-        timer += Time.deltaTime;
-                if(transform.position==pos){
-                        //Debug.Log(transform.position);
-                        startPos = pos;
-                        PosCounter++;
-             
-            pos = tartgetPos[PosCounter];
-                        timer = 0.0f;
-                }
-
-
-        
-        transform.position = Vector3.Lerp(startPos,pos,timer/travelTime);
-        transform.rotation = Quaternion.LookRotation(tartgetPos[PosCounter+5]) * Quaternion.Euler(0.0f,-80,0.0f);
     }
      
         public List<Vector3> xmlReader(string xmlFileName){
@@ -120,5 +130,27 @@ public class test : MonoBehaviour {
 
         return (float)x;
         }
+
+        public void playPause()
+    {
+
+        if (videoPlayer.isPlaying) {
+
+            videoPlayer.Pause();
+            pause = true;
+            text.text = "Play";
+
+        }
+        else {
+
+            videoPlayer.Play();
+            pause = false;
+            text.text = "Stop";
+
+        }
+
+
+    }
+
 
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using System.Xml;
-
+using UnityEngine.Video;
 public class Object_move_controller : MonoBehaviour {
     private float initX;
     private float initZ;
@@ -13,6 +13,7 @@ public class Object_move_controller : MonoBehaviour {
     private float fixLon;
     private int mapScale;
     private float scaleFactor;
+    private bool pause;
     Vector3   startPos;
         List<Vector3> tartgetPos= new List<Vector3>();
         
@@ -22,7 +23,7 @@ public class Object_move_controller : MonoBehaviour {
         public float travelTime;
         float timer;
 
-    
+
 
     void Start() {
        // gmaeObj.transform.position = new Vector3(lonToX(114.253012),0,latToZ(22.325068));
@@ -30,19 +31,22 @@ public class Object_move_controller : MonoBehaviour {
         startPos = tartgetPos[0];   
         pos = tartgetPos[PosCounter];
         timer = 0.0f;
-
+        pause = false;
         }
         void Update() {
-        timer += Time.deltaTime;
-                if(transform.position==pos){
-                        //Debug.Log(transform.position);
-                        startPos = pos;
-                        PosCounter++;
-                        pos = tartgetPos[PosCounter];
-                        timer = 0.0f;
-                }
-        transform.position = Vector3.Lerp(startPos,pos,timer/travelTime);
-        
+        if (pause == false)
+        {
+            timer += Time.deltaTime;
+            if (transform.position == pos)
+            {
+                //Debug.Log(transform.position);
+                startPos = pos;
+                PosCounter++;
+                pos = tartgetPos[PosCounter];
+                timer = 0.0f;
+            }
+            transform.position = Vector3.Lerp(startPos, pos, timer / travelTime);
+        }
 
         
         }
@@ -103,5 +107,17 @@ public class Object_move_controller : MonoBehaviour {
 
         return (float)x;
         }
+
+    public void playPause()
+    {
+        if(pause == false) {
+
+            pause = true;
+        }
+        else {
+
+            pause = false;
+        }
+    }
 
 }

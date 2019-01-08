@@ -26,7 +26,7 @@ public class checkDis : MonoBehaviour
 
             GetComponent<MeshRenderer>().enabled = true;
             transform.LookAt(player.transform);
-
+            //transform.rotation = Quaternion.LookRotation(transform.position - player.transform.position);
         }
         else {
 

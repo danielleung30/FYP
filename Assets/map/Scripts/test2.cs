@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using System.Xml;
-
+using UnityEngine.Video;
 public class test2 : MonoBehaviour {
     private float initX;
     private float initZ;
@@ -14,24 +14,27 @@ public class test2 : MonoBehaviour {
     private int mapScale;
     private float scaleFactor;
     public Transform gameobject;
+    public GameObject map;
+    public MapNav mapNav;
+    public VideoPlayer videoPlayer;
     Quaternion rotation;
-    
-    Vector3   startPos;
-        List<Vector3> tartgetPos= new List<Vector3>();
+    Vector3    startPos;
+    List<Vector3> tartgetPos= new List<Vector3>();
         
-
-        int PosCounter = 1;
-        Vector3   pos;
+    int PosCounter = 1;
+    Vector3   pos;
     Vector3 oldpos;
-        public float travelTime;
-        float timer;
+    public float travelTime;
+    float timer;
     float pp;
     Vector3 relativePos;
     Vector3 temppos;
     TextAsset textAsset;
 
     void Start() {
-        
+        map = GameObject.Find("Map");
+        mapNav = map.GetComponent<MapNav>();
+        videoPlayer = GetComponent<VideoPlayer>();
         // gmaeObj.transform.position = new Vector3(lonToX(114.253012),0,latToZ(22.325068));
         tartgetPos = xmlReader((TextAsset)Resources.Load("SBDIV_Test", typeof(TextAsset)));
         startPos = tartgetPos[0];   
@@ -40,60 +43,53 @@ public class test2 : MonoBehaviour {
         oldpos = startPos;
         
         }
-        void Update() {
+    void Update() {
+
+
+        if (mapNav.downloadMarker)
+        {
+            videoPlayer.Play();
+            timer += Time.deltaTime;
+            if (transform.position == pos)
+            {
+                startPos = pos;
+                PosCounter++;
+
+                pos = tartgetPos[PosCounter];
+                timer = 0.0f;
+            }
 
 
 
+            transform.position = Vector3.Lerp(startPos, pos, timer / travelTime);
+            transform.rotation = Quaternion.LookRotation(tartgetPos[PosCounter + 5]) * Quaternion.Euler(0.0f, -80, 0.0f);
 
-        timer += Time.deltaTime;
-                if(transform.position==pos){
-                        //Debug.Log(transform.position);
-                        startPos = pos;
-                        PosCounter++;
-             
-            pos = tartgetPos[PosCounter];
-                        timer = 0.0f;
-                }
+        }
 
-
-        
-        transform.position = Vector3.Lerp(startPos,pos,timer/travelTime);
-        transform.rotation = Quaternion.LookRotation(tartgetPos[PosCounter+5]) * Quaternion.Euler(0.0f,-80,0.0f);
     }
+
+
+
+
+
      
         public List<Vector3> xmlReader(TextAsset xmlFileName){
-                Debug.Log("Open xml");
-        
         XmlDocument xmldoc = new XmlDocument();
-        
-        
 		xmldoc.LoadXml(xmlFileName.text);
-                Debug.Log("ok");
-                double lat;
-                double lon=0;
-
-                List<Vector3>pos = new List<Vector3>();
-                foreach(XmlNode node in xmldoc.DocumentElement.ChildNodes
-            ){
-                        
-                        
-                        foreach(XmlNode trkpt in node){
-                        Debug.Log(trkpt.Name);
-                        if(trkpt.Name=="trkpt"){
-                    
-
-                        
-                    
+        Debug.Log("ok");
+        double lat;
+        double lon=0;
+        List<Vector3> pos = new List<Vector3>();
+        foreach(XmlNode node in xmldoc.DocumentElement.ChildNodes){
+            foreach(XmlNode trkpt in node){
+                 if(trkpt.Name=="trkpt"){
                         lat = double.Parse(trkpt.Attributes["lat"].Value) ;
-                        Debug.Log(lat);
-                        lon = double.Parse(trkpt.Attributes["lon"].Value);
-                    
+                        lon = double.Parse(trkpt.Attributes["lon"].Value);    
                         pos.Add(new Vector3(lonToX(lon),50.0f,latToZ(lat)));
-                        
                 }
-                        }
+            }
                         
-                }
+        }
 
                 return pos;
              

@@ -92,6 +92,7 @@
     <Compile Include="Assets\Easy Input for Gear VR\Scripts\Miscellaneous\pointerSwitch.cs" />
     <Compile Include="Assets\Easy Input for Gear VR\Scripts\Miscellaneous\Steering.cs" />
     <Compile Include="Assets\Easy Input for Gear VR\Scripts\Miscellaneous\TouchDiagnostics.cs" />
+    <Compile Include="Assets\Easy Input for Gear VR\Scripts\Raycastor.cs" />
     <Compile Include="Assets\Easy Input for Gear VR\Scripts\Standard Controllers\BaseControllers\StandardBaseLaser.cs" />
     <Compile Include="Assets\Easy Input for Gear VR\Scripts\Standard Controllers\BaseControllers\StandardBaseMovement.cs" />
     <Compile Include="Assets\Easy Input for Gear VR\Scripts\Standard Controllers\BaseControllers\StandardBaseReceiver.cs" />

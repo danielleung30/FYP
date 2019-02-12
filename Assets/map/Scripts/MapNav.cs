@@ -53,7 +53,8 @@ public class MapNav : MonoBehaviour
     public int mapScale = 100;                                  //Scale of the map. Default is 1:100
 	private float multiplier; 									//1 for a size=640x640 tile, 2 for size=1280*1280 tile, etc. Automatically set when selecting tile size
 	public string key = "XGivCKgE8sNHJcEASW2hNjGAFStk6WrA";     //AppKey (API key) code obtained from your maps provider (MapQuest, Google, etc.). 
-																//Default MapQuest key for demo purposes only (with limitations). Please get your own key before you start yout project.															 
+    public bool downloadMarker;	
+    														//Default MapQuest key for demo purposes only (with limitations). Please get your own key before you start yout project.															 
 	public string[] maptype;									//Array including available map types
 	public int[] mapSize;										//Array including available map sizes(pixels)
     public string[] mapFormat;                                  //The image format of the map. 
@@ -152,7 +153,6 @@ public class MapNav : MonoBehaviour
 	void Awake(){
 		//Set the map's tag to GameController
 		transform.tag = "GameController";
-		
 		//References to the Main Camera and Player. 
 		//Please make sure your camera is tagged as "MainCamera" and your user visualization/character as "Player"
 		cam = Camera.main.transform;
@@ -576,8 +576,10 @@ public class MapNav : MonoBehaviour
 				print("Map Ready!");
 				//use the status string variable to print messages to your own user interface (GUIText, etc.)
 				status = "Updating map 100 %\nMap Ready!";
+                downloadMarker = true;
 				yield return new WaitForSeconds (0.5f);
 				maprender.material.mainTexture = null;
+
 				Texture2D tmp;
 				tmp = new Texture2D(1280, 1280, TextureFormat.RGB24, false);
 				maprender.material.mainTexture = tmp;

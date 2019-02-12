@@ -151,6 +151,16 @@ public class test : MonoBehaviour {
 
 
     }
+    public void shoot(GameObject obj)
+    {
+        RaycastHit hit;
+        Vector3 forward = obj.transform.TransformDirection(Vector3.forward) * 10;
+        if (Physics.Raycast(obj.transform.position, (forward), out hit))
+        {
+            hit.collider.gameObject.SetActive(false);
+        }
+    }
+
 
 
 }

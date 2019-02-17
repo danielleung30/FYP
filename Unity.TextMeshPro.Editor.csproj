@@ -272,6 +272,12 @@
     <Reference Include="UnityEditor.Graphs">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>/Applications/Unity/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.OSXStandalone.Extensions">
       <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
     </Reference>
@@ -304,6 +310,12 @@
     </Reference>
     <Reference Include="UnityStore">
       <HintPath>/Users/daniel/FYP/Library/PackageCache/com.unity.xiaomi@1.0.3/UnityStore.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/mscorlib.dll</HintPath>
@@ -382,9 +394,7 @@
     <Compile Include="Packages\com.unity.textmeshpro\Scripts\Editor\TMPro_TexturePostProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\21102018.xml" />
     <None Include="Assets\360 Video Assets\Insideout.shader" />
-    <None Include="Assets\AlwayVisable.shader" />
     <None Include="Assets\Easy Input for Gear VR\ReadmeFirst.txt" />
     <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarMaterialStateShader.cginc" />
     <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarSurfaceShader.shader" />
@@ -420,7 +430,8 @@
     <None Include="Assets\Oculus\VR\Shaders\OVRColorRampAlpha.shader" />
     <None Include="Assets\Oculus\VR\Shaders\Unlit Crosshair.shader" />
     <None Include="Assets\Resources\SBDIV_Test.xml" />
-    <None Include="Assets\SBDIV_Test.xml" />
+    <None Include="Assets\xmltexr\21102018.xml" />
+    <None Include="Assets\xmltexr\SBDIV_Test.xml" />
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryCommon.uss" />
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryDark.uss" />
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryLight.uss" />

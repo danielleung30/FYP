@@ -1,8 +1,8 @@
 Android
 PlayerPath?
-/Users/daniel/fyp_03.apk
+/Users/daniel/ui-Ray01.apk
 SceneListBegin?
-Assets/Scenes/Mapdemo.unity
+Assets/Oculus/VR/Scenes/UI.unity
 SceneListEnd?
 2c16ed2625fad267c8c38b92859bd637 Assembly-CSharp.dll:EasyInputVR.Misc.pointerSwitch
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ONSPVersion
@@ -166,6 +166,7 @@ c852834080a1b9196880261cf243c36f Oculus.VR.dll:.OVRTrackedRemote
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 d29ebba88d4cc3927170b912b18dbef6 Assembly-CSharp.dll:.GPS_Status
 6de284c165c557fa232a4b83d2786f80 Oculus.VR.dll:.OVROverlay
+fa210495f76863d6467dc52586ff2db0 Assembly-CSharp.dll:.PlayerEvents
 6ed0a296f1f1c9a2b22c6f8e635be7c9 Oculus.VR.dll:.OVRProgressIndicator
 76056c447cc3c6f6ef56bfcaed33514e Oculus.VR.dll:.OVRPlatformMenu
 a318a82d5abde553e75543c7b3aba918 XiaomiSupport.dll:AppStoresSupport.AppStoreSettings
@@ -295,3 +296,6 @@ a56a51f2e505cce24d6eab45b4026f5d Assembly-CSharp.dll:.OVRVoiceModContext
 b38ac6fe72d2e909d571c0f715cf763c Assembly-CSharp.dll:EasyInputVR.StandardControllers.CustomAxisController
 9f3b4e43488d830eca5ee724db65d561 Assembly-CSharp.dll:.Object_move_controller
 35dc514a24267ed60a34e48210da87ca Assembly-CSharp.dll:.test
+2d04a418657a873b358e721a19967dc6 Assembly-CSharp.dll:.Pointer
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.interactable
+0cdf2f2ab065fa2345ab0c73d0a13f63 Assembly-CSharp.dll:.Reticule

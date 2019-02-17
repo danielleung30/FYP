@@ -43,7 +43,7 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 28
-        applicationId 'com.oculus.UnitySample03'
+        applicationId 'com.oculus.UnitySample.uiTest00'
         ndk {
             abiFilters 'armeabi-v7a', 'x86'
         }

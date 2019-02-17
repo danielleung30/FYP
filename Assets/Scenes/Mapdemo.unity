@@ -1846,18 +1846,7 @@ MonoBehaviour:
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   onLongClickStart:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 10}
-        m_MethodName: shoot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 9}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: EasyInputVR.StandardControllers.CustomButtonClickController+ButtonHandler,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   onLongClickEnd:
@@ -2358,6 +2347,81 @@ MonoBehaviour:
   m_modelGearVrController: {fileID: 0}
   m_modelOculusGoController: {fileID: 1690934758}
   m_controller: 33554432
+--- !u!114 &1862234371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862234368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f1ddc4187325b46bc32728e2a3e751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myButton: 0
+  onClickStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 421350095}
+        m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: EasyInputVR.StandardControllers.CustomButtonClickController+ButtonHandler,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  onClickEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: EasyInputVR.StandardControllers.CustomButtonClickController+ButtonHandler,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: EasyInputVR.StandardControllers.CustomButtonClickController+ButtonHandler,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  onQuickClickEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: EasyInputVR.StandardControllers.CustomButtonClickController+ButtonHandler,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  onDoubleClickEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 421350095}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: EasyInputVR.StandardControllers.CustomButtonClickController+ButtonHandler,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  onLongClickStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: EasyInputVR.StandardControllers.CustomButtonClickController+ButtonHandler,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  onLongClickEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: EasyInputVR.StandardControllers.CustomButtonClickController+ButtonHandler,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  onLongClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: EasyInputVR.StandardControllers.CustomButtonClickController+ButtonHandler,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1887348241
 PrefabInstance:
   m_ObjectHideFlags: 0

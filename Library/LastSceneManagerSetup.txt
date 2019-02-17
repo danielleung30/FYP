@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/map/Mapdemo.unity
+- path: Assets/Oculus/VR/Scenes/UI.unity
   isLoaded: 1
   isActive: 1

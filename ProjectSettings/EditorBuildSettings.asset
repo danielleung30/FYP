@@ -33,9 +33,15 @@ EditorBuildSettings:
     path: Assets/Easy Input for Gear VR/Scenes/SpecificExamples/pointerExample.unity
     guid: 23ab3175705b11d4eb528a84417a06ae
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/Mapdemo.unity
     guid: 3cd1f2da85174994597796459529a712
+  - enabled: 1
+    path: Assets/Oculus/VR/Scenes/UI.unity
+    guid: 1f4d3ae64a10d434db219de8b14348e1
+  - enabled: 0
+    path: Assets/Oculus/VR/Scenes/GearVrControllerTest.unity
+    guid: d56af3aeb2176e7459f753c1c2e2dd97
   m_configObjects: {}

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Feb 18 14:46:35 HKT 2019
+#Mon Feb 18 20:03:47 HKT 2019
 124.path=bin/Data/sharedassets0.assets.split0
 60.set=ASSET
 52.set=ASSET
@@ -76,7 +76,7 @@
 92.base=/Users/daniel/FYP/Temp/gradleOut/build/intermediates/merged_assets/release/mergeReleaseAssets/out
 8.base=/Users/daniel/FYP/Temp/gradleOut/build/intermediates/merged_assets/release/mergeReleaseAssets/out
 11.baseType=DIRECTORY
-84.path=bin/Data/sharedassets1.resource
+84.path=bin/Data/2bd7618c3fa0e4b4ab8e08dc3fadc376
 99.base=/Users/daniel/FYP/Temp/gradleOut/build/intermediates/merged_assets/release/mergeReleaseAssets/out
 123.path=bin/Data/Managed/UnityEngine.IMGUIModule.dll
 50.set=ASSET
@@ -150,7 +150,7 @@
 36.path=lib/armeabi-v7a/libAudioPluginOculusSpatializer.so
 91.base=/Users/daniel/FYP/Temp/gradleOut/build/intermediates/merged_assets/release/mergeReleaseAssets/out
 7.base=/Users/daniel/FYP/Temp/gradleOut/build/intermediates/merged_assets/release/mergeReleaseAssets/out
-83.path=bin/Data/2bd7618c3fa0e4b4ab8e08dc3fadc376
+83.path=bin/Data/sharedassets1.resource
 98.base=/Users/daniel/FYP/Temp/gradleOut/build/intermediates/merged_assets/release/mergeReleaseAssets/out
 122.path=bin/Data/Managed/UnityEngine.TilemapModule.dll
 40.set=ASSET

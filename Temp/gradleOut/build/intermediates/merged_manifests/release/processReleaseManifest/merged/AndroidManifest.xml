@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.oculus.UnitySample.uiTest08"
+    package="com.oculus.UnitySample.uiTest00"
     android:installLocation="auto"
     android:versionCode="1"
     android:versionName="0.1" >
@@ -83,7 +83,7 @@
 
         <meta-data
             android:name="unity.build-id"
-            android:value="1f2b62dd-5c93-42d0-978f-32c8814158e2" />
+            android:value="27567045-1373-4166-9886-e693964071d6" />
         <meta-data
             android:name="unity.splash-mode"
             android:value="0" />

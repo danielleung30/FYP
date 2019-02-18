@@ -1,4 +1,4 @@
-com.oculus.UnitySample.uiTest08
+com.oculus.UnitySample.uiTest00
 drawable app_banner
 drawable ic_launcher
 drawable mio_btn_bg

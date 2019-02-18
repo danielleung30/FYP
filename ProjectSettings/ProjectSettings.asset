@@ -148,8 +148,8 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.oculus.UnitySample.uiTest08
-    Standalone: com.oculus.UnityRay00
+    Android: com.oculus.UnitySample.uiTest00
+    Standalone: com.oculus.UnityRay001
     WebGL: com.oculus.UnitySample
   buildNumber: {}
   AndroidBundleVersionCode: 1

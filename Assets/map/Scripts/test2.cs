@@ -46,7 +46,7 @@ public class test2 : MonoBehaviour {
     void Update() {
 
 
-        if (mapNav.downloadMarker)
+        if (true)
         {
             videoPlayer.Play();
             timer += Time.deltaTime;

@@ -321,6 +321,7 @@
     <Compile Include="Assets\script\PlayerEvents.cs" />
     <Compile Include="Assets\script\Pointer.cs" />
     <Compile Include="Assets\script\Reticule.cs" />
+    <Compile Include="Assets\script\startScene.cs" />
     <Compile Include="Assets\script\test.cs" />
     <Compile Include="Assets\script\testrotation.cs" />
     <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarMaterialStateShader.cginc" />

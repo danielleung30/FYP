@@ -107,6 +107,7 @@
     <Compile Include="Assets\Easy Input for Gear VR\Scripts\Standard Controllers\StandardTiltController.cs" />
     <Compile Include="Assets\Easy Input for Gear VR\Scripts\Standard Controllers\StandardTouchDpadController.cs" />
     <Compile Include="Assets\Easy Input for Gear VR\Scripts\Standard Controllers\StandardTouchpadController.cs" />
+    <Compile Include="Assets\FixedScale.cs" />
     <Compile Include="Assets\map\Scenes\2D Scene\InOut.cs" />
     <Compile Include="Assets\map\Scenes\2D Scene\Points.cs" />
     <Compile Include="Assets\map\Scenes\2D Scene\TouchSound.cs" />
@@ -316,6 +317,7 @@
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceMod.cs" />
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceModContext.cs" />
     <Compile Include="Assets\script\checkDis.cs" />
+    <Compile Include="Assets\script\colliderPosition.cs" />
     <Compile Include="Assets\script\interactable.cs" />
     <Compile Include="Assets\script\Object_move_controller.cs" />
     <Compile Include="Assets\script\PlayerEvents.cs" />

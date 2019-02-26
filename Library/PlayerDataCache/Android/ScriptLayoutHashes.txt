@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-/Users/daniel/ui-Ray11.apk
+/Users/daniel/ui-pointerTest55.apk
 SceneListBegin?
 Assets/Scenes/UI.unity
 Assets/Scenes/Mapdemo.unity
@@ -239,6 +239,7 @@ b4f33769b4be9dc6ee0546bbfc960cbb Assembly-CSharp.dll:.OVRLipSyncContext
 6eec73ef93bfe43ef513041177529a3d Oculus.VR.dll:.OVRWaitCursor
 ebac2a0d6df7ca741e9468c0ef18345b Assembly-CSharp.dll:.OvrAvatar
 025866bb53162ac1e71a1b207ceca793 Assembly-CSharp.dll:.OvrAvatarRemoteDriver
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.colliderPosition
 aa82b3ce4c0c9b227036c0337315c5d3 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 e51c09a4cc447f11db225afcd8e3e490 Unity.TextMeshPro.dll:TMPro.TMP_Settings
 a4b88f3b08f1f148e04c6c3d7544c9ec Oculus.VR.dll:.OVRChromaticAberration
@@ -292,6 +293,7 @@ e0475d65722bed2dd3b9d486fcfaedfc Assembly-CSharp.dll:EasyInputVR.StandardControl
 1b862038859b267ceaddb5cf7530c567 Assembly-CSharp.dll:.LipSyncDemo_SetCurrentTarget
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
+95331bea3fd36bd2cf143f88aa180fc3 Assembly-CSharp.dll:.FixedScale
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.OVRVoiceMod
 37b3f3814ed8ed3a9780f59bbe6e6c61 Assembly-CSharp.dll:EasyInputVR.StandardControllers.StandardPointerReceiver
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh

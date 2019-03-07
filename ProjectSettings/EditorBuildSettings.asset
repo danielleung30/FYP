@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Easy Input for Gear VR/Scenes/SpecificExamples/firstPersonGearVRController.unity
     guid: dca07c3ccb5dbef4d84e5d7fd2c3bea5
   - enabled: 0
-    path: Assets/Easy Input for Gear VR/Scenes/SpecificExamples/GuiNavigationExample.unity
+    path: Assets/Scenes/GuiNavigationExample.unity
     guid: fb855d93a9855694793786e193657b08
   - enabled: 0
     path: Assets/Easy Input for Gear VR/Scenes/SpecificExamples/GamepadControllerDiagnosticExample.unity

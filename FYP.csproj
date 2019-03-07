@@ -600,6 +600,7 @@
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceModContext.cs" />
     <Compile Include="Assets\script\checkDis.cs" />
     <Compile Include="Assets\script\colliderPosition.cs" />
+    <Compile Include="Assets\script\FJK.cs" />
     <Compile Include="Assets\script\interactable.cs" />
     <Compile Include="Assets\script\Object_move_controller.cs" />
     <Compile Include="Assets\script\PlayerEvents.cs" />

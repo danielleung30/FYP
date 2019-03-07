@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Pointer : MonoBehaviour
 {
-
+    public Text GGtext;
     public float m_distance = 10.0f;
     public LineRenderer m_LineRenderer = null;
     public LayerMask m_EverythingMask = 0;
@@ -36,7 +37,7 @@ public class Pointer : MonoBehaviour
         Vector3 hitPoint = UpdateLine();
 
         m_CurrentObject = updatePointerStatus();
-
+        GGtext.text = m_CurrentObject.name;
         if (OnPointerUpdate != null) {
             OnPointerUpdate(hitPoint, m_CurrentObject);
             }
@@ -116,10 +117,11 @@ public class Pointer : MonoBehaviour
         m_LineRenderer.endColor = endColor;
     }
 
-    private void ProcessTriggerDown()
+    public void ProcessTriggerDown()
     {
         if (!m_CurrentObject)
             return;
+        GGtext.text = m_CurrentObject.name;
         interactable interact = m_CurrentObject.GetComponent<interactable>();
         interact.Pressed(); 
     }

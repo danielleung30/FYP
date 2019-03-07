@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-/Users/daniel/ui-pointerTest55.apk
+/Users/daniel/ui-pointerTest101.apk
 SceneListBegin?
 Assets/Scenes/UI.unity
 Assets/Scenes/Mapdemo.unity
@@ -31,6 +31,7 @@ e4c511fcf31a39b6e614595be7309046 Assembly-CSharp.dll:.LipSyncDemo_Control
 0c60b26bc331259f6655dccf9c91b76e Assembly-CSharp.dll:UnityEngine.EventSystems.EasyInputModule
 ee064a1c4ba1f660af1c5b892fd2512c Assembly-CSharp.dll:.PlayerController
 e7a73f5f78ba6445195ec23b74a1ce2d Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
+25c357e41162fa8044553652e108e841 Assembly-CSharp.dll:.FJK
 2f10cc4ec84a9874cfdfe66177cccdd6 Oculus.VR.dll:.OVRDebugHeadController
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.OvrAvatarTextureCopyManager
 d46f71bef684da0251e52e1cb905fdb2 Oculus.VR.dll:.OVRManager
@@ -276,7 +277,7 @@ a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 3f70808c2961a598688d62ac6c3c9016 Oculus.VR.dll:UnityEngine.EventSystems.OVRPhysicsRaycaster
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 34c971ccf5a4d4c276f7753251cba95d Oculus.VR.dll:.OVRGridCube
-2d04a418657a873b358e721a19967dc6 Assembly-CSharp.dll:.Pointer
+446d62d7f7ba38d994212b5915e24008 Assembly-CSharp.dll:.Pointer
 8b9f42d72019bde2f9fe0667762eaff3 Assembly-CSharp.dll:.OvrAvatarSkinnedMeshRenderComponent
 5822d9b1996f6a10a18eafc617df0cd0 Assembly-CSharp.dll:EasyInputVR.StandardControllers.BowlingThrow
 6adf0680d8d7e110dab1c5470b12851b Oculus.VR.dll:.OVRLint
@@ -303,3 +304,4 @@ a56a51f2e505cce24d6eab45b4026f5d Assembly-CSharp.dll:.OVRVoiceModContext
 b38ac6fe72d2e909d571c0f715cf763c Assembly-CSharp.dll:EasyInputVR.StandardControllers.CustomAxisController
 9f3b4e43488d830eca5ee724db65d561 Assembly-CSharp.dll:.Object_move_controller
 35dc514a24267ed60a34e48210da87ca Assembly-CSharp.dll:.test
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TestRay

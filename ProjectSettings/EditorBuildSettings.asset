@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Easy Input for Gear VR/Scenes/SpecificExamples/firstPersonGearVRController.unity
     guid: dca07c3ccb5dbef4d84e5d7fd2c3bea5
   - enabled: 0
-    path: Assets/Scenes/GuiNavigationExample.unity
+    path: Assets/Easy Input for Gear VR/Scenes/SpecificExamples/GuiNavigationExample.unity
     guid: fb855d93a9855694793786e193657b08
   - enabled: 0
     path: Assets/Easy Input for Gear VR/Scenes/SpecificExamples/GamepadControllerDiagnosticExample.unity
@@ -35,7 +35,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/UI.unity
     guid: 1f4d3ae64a10d434db219de8b14348e1
   - enabled: 1

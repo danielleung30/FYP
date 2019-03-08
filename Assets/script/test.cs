@@ -17,14 +17,14 @@ public class test : MonoBehaviour {
     private float scaleFactor;
     public Text text;
     public Transform gameobject;
-    private VideoPlayer videoPlayer;
     Quaternion rotation;
     Boolean pause;
     Vector3   startPos;
         List<Vector3> tartgetPos= new List<Vector3>();
-        
+    public double videotime;
+    public VideoPlayer videoPlayer;
 
-        int PosCounter = 1;
+    int PosCounter = 1;
         Vector3   pos;
     Vector3 oldpos;
         public float travelTime;
@@ -49,7 +49,7 @@ public class test : MonoBehaviour {
         
         }
         void Update() {
-
+        videotime = videoPlayer.time;
 
         if (pause == false)
         {
@@ -161,6 +161,17 @@ public class test : MonoBehaviour {
         }
     }
 
+    public void Fastfoward()
+    {
+        videoPlayer.time = videoPlayer.time + 5;
+        timer = timer + 5;
+    }
 
+
+    public void Rewind()
+    {
+        videoPlayer.time = videoPlayer.time - 5;
+        timer = timer - 5;
+    }
 
 }

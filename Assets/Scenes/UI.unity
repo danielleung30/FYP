@@ -315,8 +315,8 @@ RectTransform:
   m_Father: {fileID: 1272495786}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.0625, y: 0}
+  m_AnchorMax: {x: 0.0625, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -383,7 +383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &154823737
 RectTransform:
   m_ObjectHideFlags: 0
@@ -704,7 +704,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.0625, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1625,7 +1625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30530ad0e40d0a64ea26d753ee4996ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hideByDefault: 1
+  hideByDefault: 0
   showTimeoutPeriod: 1
   hideTimeoutPeriod: 0.1
   dimOnHideRequest: 1
@@ -2934,7 +2934,7 @@ GameObject:
   - component: {fileID: 1764992134}
   - component: {fileID: 1764992133}
   m_Layer: 0
-  m_Name: EventSystem(From ui)
+  m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3612,7 +3612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cc7829cd849f408da60c6a63a21a712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GGtext: {fileID: 0}
   m_distance: 10
   m_LineRenderer: {fileID: 6731342623732900266}
   m_EverythingMask:

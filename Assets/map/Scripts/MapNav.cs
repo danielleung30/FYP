@@ -268,17 +268,17 @@ public class MapNav : MonoBehaviour
         // First, check if user has location service enabled
 
         // Start service before querying location
-        Input.location.Start(3.0f, 3.0f);
-        Input.compass.enabled = true;
-        print("Initializing Location Services..");
-        status = "Initializing Location Services..";
+      //  Input.location.Start(3.0f, 3.0f);
+       // Input.compass.enabled = true;
+      //  print("Initializing Location Services..");
+       // status = "Initializing Location Services..";
 
         // Wait until service initializes
-        while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
-        {
-            yield return new WaitForSeconds(1);
-            maxWait--;
-        }
+       // while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
+       // {
+         //   yield return new WaitForSeconds(1);
+         //   maxWait--;
+      //  }
 
 
         // Access granted and location value could be retrieved
@@ -299,7 +299,7 @@ public class MapNav : MonoBehaviour
             //Wait in order to find enough satellites and increase GPS accuracy
             yield return new WaitForSeconds(initTime);
             //Set position
-            loc = Input.location.lastData;
+           // loc = Input.location.lastData;
             iniRef = WGS84toWebMercator(loc.longitude, loc.latitude, 0f);
             fixLon = loc.longitude;
             fixLat = loc.latitude;
@@ -342,7 +342,7 @@ public class MapNav : MonoBehaviour
         {
             if (!simGPS)
             {
-                loc = Input.location.lastData;
+               // loc = Input.location.lastData;
                 newUserPos = WGS84toWebMercator(loc.longitude, loc.latitude, newUserPos.y) - iniRef;
 
                 dmsLat = convertdmsLat(loc.latitude);
@@ -406,43 +406,44 @@ public class MapNav : MonoBehaviour
         CursorsOff();
 
         //CHECK GPS STATUS AND RESTART IF NEEDED
-
-        if (Input.location.status == LocationServiceStatus.Stopped || Input.location.status == LocationServiceStatus.Failed)
+        if (false)
         {
-            // Start service before querying location
-            Input.location.Start(3.0f, 3.0f);
-
-            // Wait until service initializes
-            int maxWait = 20;
-            while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
+            if (Input.location.status == LocationServiceStatus.Stopped || Input.location.status == LocationServiceStatus.Failed)
             {
-                yield return new WaitForSeconds(1);
-                maxWait--;
-            }
+                // Start service before querying location
+                //Input.location.Start(3.0f, 3.0f);
 
-            // Service didn't initialize in 20 seconds
-            if (maxWait < 1)
-            {
-                print("Timed out");
-                //use the status string variable to print messages to your own user interface (GUIText, etc.)
-                status = "Timed out";
-            }
+                // Wait until service initializes
+                int maxWait = 20;
+                while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
+                {
+                    yield return new WaitForSeconds(1);
+                    maxWait--;
+                }
 
-            // Connection has failed
-            if (Input.location.status == LocationServiceStatus.Failed)
-            {
-                print("Unable to determine device location");
-                //use the status string variable to print messages to your own user interface (GUIText, etc.)
-                status = "Unable to determine device location";
-            }
+                // Service didn't initialize in 20 seconds
+                if (maxWait < 1)
+                {
+                    print("Timed out");
+                    //use the status string variable to print messages to your own user interface (GUIText, etc.)
+                    status = "Timed out";
+                }
 
+                // Connection has failed
+                if (Input.location.status == LocationServiceStatus.Failed)
+                {
+                    print("Unable to determine device location");
+                    //use the status string variable to print messages to your own user interface (GUIText, etc.)
+                    status = "Unable to determine device location";
+                }
+
+            }
         }
-
         //------------------------------------------------------------------ //
 
         www = null;
         //Get last available location data
-        loc = Input.location.lastData;
+        //loc = Input.location.lastData;
         //Make player invisible while updating map
         user.gameObject.GetComponent<Renderer>().enabled = false;
 

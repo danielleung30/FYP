@@ -182,13 +182,13 @@ namespace EasyInputVR.StandardControllers
             {
                 //laser pointer mode
 
-                offsetPosition = motion.currentPos;
-                offsetPosition.y += laserHeightOffset;
+               // offsetPosition = motion.currentPos;
+                //offsetPosition.y += laserHeightOffset;
 
-                if (laserPointer.transform.parent == null)
-                    laserPointer.transform.localPosition = initialPosition + offsetPosition;
-                else
-                    laserPointer.transform.localPosition = offsetPosition;
+               // if (laserPointer.transform.parent == null)
+                 //   laserPointer.transform.localPosition = initialPosition + offsetPosition;
+              //  else
+                   // laserPointer.transform.localPosition = offsetPosition;
 
 
                 laserPointer.transform.localRotation = motion.currentOrientation;

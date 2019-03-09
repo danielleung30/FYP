@@ -6,6 +6,7 @@ using System.Xml;
 using UnityEngine.Video;
 public class test2 : MonoBehaviour
 {
+    public float testY;
     public double videotime;
     public VideoPlayer videoPlayer;
     private float initX;
@@ -69,7 +70,7 @@ public class test2 : MonoBehaviour
                 timer = 0.0f;
             }
             transform.position = Vector3.Lerp(startPos, pos, timer / travelTime);
-            //transform.rotation = Quaternion.LookRotation(pos+tartgetPos[PosCounter + 5]) * Quaternion.Euler(0.0f, 0.0f, 0.0f);
+            transform.rotation = Quaternion.LookRotation(pos - tartgetPos[PosCounter + 5]);
         }
 
 
@@ -98,7 +99,7 @@ public class test2 : MonoBehaviour
                 {
                     lat = double.Parse(trkpt.Attributes["lat"].Value);
                     lon = double.Parse(trkpt.Attributes["lon"].Value);
-                    pos.Add(new Vector3(lonToX(lon), 50.0f, latToZ(lat)));
+                    pos.Add(new Vector3(lonToX(lon), 0, latToZ(lat)));
                 }
             }
 

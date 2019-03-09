@@ -59,6 +59,8 @@ public class Instantiate_Obj : MonoBehaviour
         var gps = GameObject.FindGameObjectWithTag("GameController").GetComponent<MapNav>();
         float fixLat = gps.fixLat; 
         float fixLon = gps.fixLon;
+        Debug.Log("fixLat:" + fixLat);
+        Debug.Log("fixLon:" + fixLon);
         int mapScale = gps.mapScale;
 
         float initX = fixLon * 20037508.34f / (180*mapScale);

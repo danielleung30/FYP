@@ -1780,7 +1780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e5602478b2648f4388461180227a19a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 10000
+  distance: 700
   player: {fileID: 421350094}
   _rectTransform: {fileID: 335321657}
 --- !u!1 &385366149
@@ -2032,6 +2032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c1a18360b77f843a911fc7e90d0ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testY: 0
   videotime: 0
   videoPlayer: {fileID: 421350095}
   gameobject: {fileID: 0}
@@ -3468,6 +3469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c1a18360b77f843a911fc7e90d0ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testY: 0
   videotime: 0
   videoPlayer: {fileID: 0}
   gameobject: {fileID: 0}
@@ -5525,7 +5527,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188093211}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2e5bd35268a9614ca27d48847a52770, type: 3}
   m_Name: 
@@ -5549,8 +5551,8 @@ MonoBehaviour:
   simGPS: 1
   userSpeed: 10
   realSpeed: 0
-  fixLat: 22.324224
-  fixLon: 114.14217
+  fixLat: 22.298792
+  fixLon: 114.1547
   altitude: 0
   heading: 0
   accuracy: 0

@@ -1,11 +1,14 @@
 ﻿<Properties StartupConfiguration="{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/testCheckDis.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/startScene.cs">
     <Files>
-      <File FileName="Assets/map/Scripts/MapNav.cs" Line="42" Column="24" />
-      <File FileName="Assets/map/Scripts/test2.cs" Line="73" Column="15" />
-      <File FileName="Assets/script/Instantiate_Obj.cs" Line="64" Column="37" />
+      <File FileName="Assets/map/Scripts/MapNav.cs" Line="1" Column="1" />
+      <File FileName="Assets/map/Scripts/test2.cs" Line="172" Column="6" />
+      <File FileName="Assets/script/Instantiate_Obj.cs" Line="46" Column="64" />
       <File FileName="Assets/map/Scripts/SetGeolocation.cs" Line="1" Column="1" />
-      <File FileName="Assets/script/testCheckDis.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/testCheckDis.cs" Line="18" Column="6" />
+      <File FileName="Assets/Easy Input for Gear VR/Scripts/Standard Controllers/StandardPointerReceiver.cs" Line="10" Column="41" />
+      <File FileName="Assets/eventScript.cs" Line="19" Column="1" />
+      <File FileName="Assets/script/startScene.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

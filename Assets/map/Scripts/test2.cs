@@ -70,7 +70,7 @@ public class test2 : MonoBehaviour
                 timer = 0.0f;
             }
             transform.position = Vector3.Lerp(startPos, pos, timer / travelTime);
-            transform.rotation = Quaternion.LookRotation(pos - tartgetPos[PosCounter + 5]);
+            transform.rotation = Quaternion.LookRotation(pos-tartgetPos[PosCounter + 5]) * Quaternion.Euler(0.0f, 80.0f, 0.0f);
         }
 
 

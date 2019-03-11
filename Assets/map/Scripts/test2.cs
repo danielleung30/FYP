@@ -157,25 +157,48 @@ public class test2 : MonoBehaviour
 
         }
     }
+    // public void Fastfoward()
+    // {
+    //     videoPlayer.Pause();
+    //     timer = timer + 5;
+    //     pos = tartgetPos[PosCounter + 5];
+    //     videoPlayer.time = videotime + 5;
+    //     transform.position = Vector3.Lerp(startPos, pos, timer / travelTime);
+        
+    // }
+
+
+    // public void Rewind()
+    // {
+    //     videoPlayer.Pause();
+    //     timer = timer - 5;
+    //     pos =tartgetPos[PosCounter-5];
+    //     videoPlayer.time = videotime - 5;
+    //     transform.position = Vector3.Lerp(startPos, pos, timer / travelTime);
+       
+    // }
     public void Fastfoward()
     {
-        videoPlayer.Pause();
         timer = timer + 5;
-        pos = tartgetPos[PosCounter + 5];
+        PosCounter = PosCounter + 5;
+        startPos = tartgetPos[PosCounter];
+        pos = tartgetPos[PosCounter + 1];
         videoPlayer.time = videotime + 5;
-        transform.position = Vector3.Lerp(startPos, pos, timer / travelTime);
-        
+        transform.position = pos;
+        transform.rotation = Quaternion.LookRotation(pos - tartgetPos[PosCounter + 5]) * Quaternion.Euler(0.0f, 80.0f, 0.0f);
     }
 
 
     public void Rewind()
     {
-        videoPlayer.Pause();
+
         timer = timer - 5;
-        pos =tartgetPos[PosCounter-5];
+        PosCounter = PosCounter - 5;
+        startPos = tartgetPos[PosCounter];
+        pos = tartgetPos[PosCounter + 1];
         videoPlayer.time = videotime - 5;
-        transform.position = Vector3.Lerp(startPos, pos, timer / travelTime);
-       
+        transform.position = pos;
+        transform.rotation = Quaternion.LookRotation(pos - tartgetPos[PosCounter + 5]) * Quaternion.Euler(0.0f, 80.0f, 0.0f);
     }
 }
 

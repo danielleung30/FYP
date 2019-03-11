@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 public class Instantiate_Obj : MonoBehaviour
 {
     public GameObject Instantiate_Position;
     public GameObject SpawnMarker;
+    public GameObject TextContainer;
 
     void Start()
     {
@@ -41,6 +43,9 @@ public class Instantiate_Obj : MonoBehaviour
                         SpawnMarker.GetComponentInChildren<TextMesh>().text = "";
                         SpawnMarker.GetComponentInChildren<TextMesh>().name = marker.TITLE;
                         SpawnMarker.name = marker.TITLE;
+
+                        TextContainer.GetComponentInChildren<Text>().text = marker.DESCRIPTION;
+
                         float longitude = float.Parse(marker.LONGITUDE);
                         float latitude = float.Parse(marker.LATITUDE);
                         Debug.Log(longitude + "//" + latitude);

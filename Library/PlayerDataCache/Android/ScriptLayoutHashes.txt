@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/adb/d5.apk
+C:/adb/fi8.apk
 SceneListBegin?
 Assets/Scenes/Mapdemo.unity
 SceneListEnd?
@@ -188,6 +188,7 @@ b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.InitScreen
 71bb6a6b6c8f052f948db64c7dd3ca4f Oculus.VR.dll:.OVRDebugInfo
 8b9f42d72019bde2f9fe0667762eaff3 Assembly-CSharp.dll:.OvrAvatarSkinnedMeshRenderPBSComponent
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.HoverText
 768b8da722dc047cd21ccc0a4e6ada78 Assembly-CSharp.dll:EasyInputVR.StandardControllers.StandardTouchDpadController
 9cd68a242cf6a11a3a2b7e022050a13b Assembly-CSharp.dll:EasyInputVR.StandardControllers.StandardPointerClickReceiver
 1eb9aed3cd6453fbc580cf51127908af Assembly-CSharp.dll:Oculus.Platform.CallbackRunner
@@ -218,6 +219,7 @@ b27e76d59effd073542707d3c9b61f28 Assembly-CSharp.dll:EasyInputVR.Misc.FirstPerso
 8ec781ae5bec0cf01293f51915ca5de0 Assembly-CSharp.dll:.MapNav
 9edf0788742c31d8eaaf32cf4feac747 Oculus.VR.dll:.OVRModeParms
 b5d01a44c9a694c6b9bce4626dd0a12e Oculus.VR.dll:.OVRGearVrControllerTest
+9f54e90afea28775ebea5ef289593867 Assembly-CSharp.dll:.DescOpener
 ab0a308aacb67350e8cee127a7df04d2 Assembly-CSharp.dll:.AmbienceEmitter
 1b2819af524d904110cddff35d8e3f18 Assembly-CSharp.dll:EasyInputVR.StandardControllers.StandardGrabReceiver
 bf8312e5e419f0f7299da40aabf2d600 Assembly-CSharp.dll:.RemoteLoopbackManager
@@ -312,5 +314,3 @@ a56a51f2e505cce24d6eab45b4026f5d Assembly-CSharp.dll:.OVRVoiceModContext
 b38ac6fe72d2e909d571c0f715cf763c Assembly-CSharp.dll:EasyInputVR.StandardControllers.CustomAxisController
 9f3b4e43488d830eca5ee724db65d561 Assembly-CSharp.dll:.Object_move_controller
 b474b2ea81ccbd4bba48fd695193f64b Assembly-CSharp.dll:.test
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.HoverText
-9f54e90afea28775ebea5ef289593867 Assembly-CSharp.dll:.DescOpener

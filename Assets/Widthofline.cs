@@ -14,7 +14,8 @@ public class Widthofline : MonoBehaviour
     void Update()
     {
         LineRenderer lineRenderer = gameObject.GetComponent<LineRenderer>();
-        lineRenderer.startWidth=0.1f;
-        lineRenderer.endWidth = 0.1f;
+        lineRenderer.startWidth=0.7f;
+        lineRenderer.endWidth = 0.7f;
+       
 }
 }

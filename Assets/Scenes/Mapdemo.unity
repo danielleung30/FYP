@@ -1986,7 +1986,7 @@ GameObject:
   - component: {fileID: 335321661}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: marker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2361,7 +2361,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421350094}
-  m_LocalRotation: {x: 0, y: 0, z: 0.0030689156, w: 0.9999953}
+  m_LocalRotation: {x: -0.002783992, y: -0.9063036, z: 0.0012981967, w: 0.42261627}
   m_LocalPosition: {x: 0.068540126, y: 49.984356, z: 9.900004}
   m_LocalScale: {x: 1000, y: 1000, z: 1000}
   m_Children:
@@ -2369,7 +2369,7 @@ Transform:
   - {fileID: 1406410392}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.35200003}
+  m_LocalEulerAnglesHint: {x: 0, y: -130, z: 0.35200003}
 --- !u!114 &421350100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2382,7 +2382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c2df1dfc690b471e80f7cd4e72091f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  travelTime: 1
+  travelTime: 0.1
 --- !u!114 &421350101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3917,7 +3917,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2080719720}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 0.25
+  m_MaxValue: 0.11
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -4503,8 +4503,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853344381}
-  m_LocalRotation: {x: 0, y: 0.17364816, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 0, y: 0, z: 0.25}
+  m_LocalRotation: {x: -0, y: 0.0029687579, z: -0, w: 0.9999956}
+  m_LocalPosition: {x: 0, y: 0, z: 0.312}
   m_LocalScale: {x: 0.019926425, y: 0.019926436, z: 0.019999994}
   m_Children:
   - {fileID: 1456791103}
@@ -4512,10 +4512,10 @@ RectTransform:
   - {fileID: 1612450746}
   m_Father: {fileID: 1942217094}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 20, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0.34, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.3, y: 0}
+  m_AnchoredPosition: {x: 0.079, y: 0.074}
   m_SizeDelta: {x: 1500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &888456132
@@ -6543,6 +6543,7 @@ MonoBehaviour:
   Instantiate_Position: {fileID: 1280342114}
   SpawnMarker: {fileID: 335321653}
   TextContainer: {fileID: 2029302302}
+  done: 0
 --- !u!4 &1280342116
 Transform:
   m_ObjectHideFlags: 0
@@ -7737,7 +7738,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1621072495
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17665,8 +17666,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1697678811}
   - component: {fileID: 1697678812}
+  - component: {fileID: 1697678813}
+  - component: {fileID: 1697678814}
   m_Layer: 5
-  m_Name: Toggle
+  m_Name: showMarker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17736,12 +17739,12 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1462772507}
-        m_MethodName: valueChanged
-        m_Mode: 2
+      - m_Target: {fileID: 1697678813}
+        m_MethodName: ShowMarker
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1697678812}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -17749,7 +17752,31 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
+--- !u!114 &1697678813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697678810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c454d38b28492474ab3089a799d01102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1697678814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697678810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f80a8a87c4b548f5808e8eb9d53252d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1732350888
 GameObject:
   m_ObjectHideFlags: 0
@@ -18731,15 +18758,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.64278764
+      value: 0.6427876
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18777,6 +18804,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 113768, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 20000010189485334, guid: 126d619cf4daa52469682f85c1378b4a,
         type: 3}
       propertyPath: m_Enabled
@@ -18786,10 +18817,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 113768, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2037080, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: orthographic
@@ -18913,6 +18940,18 @@ PrefabInstance:
     - target: {fileID: 487254, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}

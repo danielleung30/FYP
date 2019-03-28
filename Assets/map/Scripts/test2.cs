@@ -23,7 +23,7 @@ public class test2 : MonoBehaviour
     Quaternion rotation;
     Vector3 startPos;
     List<Vector3> tartgetPos = new List<Vector3>();
-
+    
     int PosCounter = 1;
     Vector3 pos;
     Vector3 oldpos;
@@ -47,6 +47,9 @@ public class test2 : MonoBehaviour
         videoPlayer = GetComponent<VideoPlayer>();
         // gmaeObj.transform.position = new Vector3(lonToX(114.253012),0,latToZ(22.325068));
         tartgetPos = xmlReader((TextAsset)Resources.Load("SBDIV_Test", typeof(TextAsset)));
+        //Debug.Log(tartgetPos.Count);
+        //tartgetPos = changeTargetPos(preprocess_pos);
+        // Debug.Log(tartgetPos.Count);
         startPos = tartgetPos[0];
         pos = tartgetPos[PosCounter];
         timer = 0.0f;
@@ -70,7 +73,9 @@ public class test2 : MonoBehaviour
                 timer = 0.0f;
             }
             transform.position = Vector3.Lerp(startPos, pos, timer / travelTime);
-            transform.rotation = Quaternion.LookRotation(pos-tartgetPos[PosCounter + 5]) * Quaternion.Euler(0.0f, 80.0f, 0.0f);
+            // transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(transform.position - tartgetPos[PosCounter + 3]), Time.deltaTime)  ;
+            // transform.rotation = (Quaternion.LookRotation(pos - tartgetPos[PosCounter + 3]) * Quaternion.Euler(0.0f, 80.0f, 0.0f));
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, (Quaternion.LookRotation(pos - tartgetPos[PosCounter + 3]) * Quaternion.Euler(0.0f, 80.0f, 0.0f)),Time.deltaTime);
         }
 
 
@@ -199,6 +204,45 @@ public class test2 : MonoBehaviour
         videoPlayer.time = videotime - 5;
         transform.position = pos;
         transform.rotation = Quaternion.LookRotation(pos - tartgetPos[PosCounter + 5]) * Quaternion.Euler(0.0f, 80.0f, 0.0f);
+    }
+
+    public Vector3 PointOnCurve(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3, float t)
+    {
+        Vector3 ret = new Vector3();
+
+        float t2 = t * t;
+        float t3 = t2 * t;
+
+        ret.x = 0.5f * ((2.0f * p1.x) +
+        (-p0.x + p2.x) * t +
+        (2.0f * p0.x - 5.0f * p1.x + 4 * p2.x - p3.x) * t2 +
+        (-p0.x + 3.0f * p1.x - 3.0f * p2.x + p3.x) * t3);
+
+        ret.z = 0.5f * ((2.0f * p1.z) +
+        (-p0.z + p2.z) * t +
+        (2.0f * p0.z - 5.0f * p1.z + 4 * p2.z - p3.z) * t2 +
+        (-p0.z + 3.0f * p1.z - 3.0f * p2.z + p3.z) * t3);
+        //Debug.Log(ret);
+        return ret;
+    }
+
+    public List<Vector3> changeTargetPos(List<Vector3> list)
+     {
+        List<Vector3> newTargetPos = new List<Vector3>();
+        for(int i = 0; i < list.Count; i++) 
+        {
+            float t = 0.0f;
+            Debug.Log("Point:" + i);
+            Debug.Log(list[i]);
+            for (int j = 0; j<10; j++) {
+                Vector3 point = PointOnCurve(list[i], list[i + 1], list[i + 2], list[i + 3], t);
+                newTargetPos.Add(point);
+                t = t + 0.1f;
+                Debug.Log(point);
+            }
+        }
+
+        return newTargetPos;
     }
 }
 

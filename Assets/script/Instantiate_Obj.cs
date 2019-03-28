@@ -10,7 +10,7 @@ public class Instantiate_Obj : MonoBehaviour
     public GameObject Instantiate_Position;
     public GameObject SpawnMarker;
     public GameObject TextContainer;
-
+    public bool done = false;
     void Start()
     {
         StartCoroutine(getUnityWebRequest());
@@ -43,7 +43,7 @@ public class Instantiate_Obj : MonoBehaviour
                         SpawnMarker.GetComponentInChildren<TextMesh>().text = "";
                         SpawnMarker.GetComponentInChildren<TextMesh>().name = marker.TITLE;
                         SpawnMarker.name = marker.TITLE;
-
+                        SpawnMarker.tag = "marker";
                         TextContainer.GetComponentInChildren<Text>().text = marker.DESCRIPTION;
 
                         float longitude = float.Parse(marker.LONGITUDE);
@@ -54,8 +54,9 @@ public class Instantiate_Obj : MonoBehaviour
                         // Debug.Log(marker.TITLE);
                         // Debug.Log(marker.LATITUDE);
                         // Debug.Log(marker.LONGITUDE);
-                    } Destroy(SpawnMarker);
-
+                    } 
+                    Destroy(SpawnMarker);
+                    done = true;
                 }
             }
         }
@@ -66,8 +67,8 @@ public class Instantiate_Obj : MonoBehaviour
         var gps = GameObject.FindGameObjectWithTag("GameController").GetComponent<MapNav>();
         float fixLat = gps.fixLat;
         float fixLon = gps.fixLon;
-        Debug.Log("fixLat:" + fixLat);
-        Debug.Log("fixLon:" + fixLon);
+       // Debug.Log("fixLat:" + fixLat);
+       // Debug.Log("fixLon:" + fixLon);
         int mapScale = gps.mapScale;
 
         float initX = fixLon * 20037508.34f / (180 * mapScale);

@@ -27,5 +27,6 @@ public class RootObject
     public string LONGITUDE;
     public string DESCRIPTION;
     public string VIDEO_ID;
+    public string TYPE;
 }
 

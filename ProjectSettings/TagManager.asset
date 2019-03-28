@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - LocationInfo
+  - marker
+  - Pier
+  - Building
+  - Typhoon shelters
+  - Others
   layers:
   - Default
   - TransparentFX
@@ -17,7 +22,7 @@ TagManager:
   - PostProcessing
   - renderobject
   - interactable
-  - 
+  - marker
   - 
   - 
   - 

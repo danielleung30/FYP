@@ -17,7 +17,7 @@ public class DescOpener : MonoBehaviour
 
     public void EnableAll1()
     {
-        GameObject[] spawns = GameObject.FindGameObjectsWithTag("SpawnMarkers");
+        GameObject[] spawns = GameObject.FindGameObjectsWithTag("marker");
         foreach (GameObject spawn in spawns)
         {
             //bool isActive = spawn.activeSelf;
@@ -27,7 +27,7 @@ public class DescOpener : MonoBehaviour
 
     public void EnableAll2()
     {
-        GameObject[] spawns = GameObject.FindGameObjectsWithTag("SpawnMarkers");
+        GameObject[] spawns = GameObject.FindGameObjectsWithTag("marker");
         foreach (GameObject spawn in spawns)
         {
             //bool isActive = spawn.activeSelf;

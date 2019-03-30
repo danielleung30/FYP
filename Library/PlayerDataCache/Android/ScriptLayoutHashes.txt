@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/adb/arp42.apk
+C:/adb/arp44.apk
 SceneListBegin?
 Assets/Scenes/Mapdemo.unity
 SceneListEnd?

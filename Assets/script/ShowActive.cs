@@ -8,6 +8,7 @@ public class ShowActive : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         mypanel.SetActive(false);
     }
 

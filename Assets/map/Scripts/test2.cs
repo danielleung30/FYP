@@ -23,7 +23,7 @@ public class test2 : MonoBehaviour
     Quaternion rotation;
     Vector3 startPos;
     List<Vector3> tartgetPos = new List<Vector3>();
-    
+    public float timetemp2=1;
     int PosCounter = 1;
     Vector3 pos;
     Vector3 oldpos;
@@ -34,6 +34,7 @@ public class test2 : MonoBehaviour
     Vector3 temppos;
     TextAsset textAsset;
     Boolean pause;
+    public float timetemp;
     private void Awake()
     {
         videoPlayer = GetComponent<VideoPlayer>();
@@ -42,6 +43,7 @@ public class test2 : MonoBehaviour
 
     void Start()
     {
+        timetemp = travelTime;
         map = GameObject.Find("Map");
         mapNav = map.GetComponent<MapNav>();
         videoPlayer = GetComponent<VideoPlayer>();
@@ -184,26 +186,26 @@ public class test2 : MonoBehaviour
     // }
     public void Fastfoward()
     {
-        timer = timer + 5;
-        PosCounter = PosCounter + 5;
+        timer = timer + 10;
+        PosCounter = PosCounter + 10;
         startPos = tartgetPos[PosCounter];
         pos = tartgetPos[PosCounter + 1];
-        videoPlayer.time = videotime + 5;
+        videoPlayer.time = videotime + 10;
         transform.position = pos;
-        transform.rotation = Quaternion.LookRotation(pos - tartgetPos[PosCounter + 5]) * Quaternion.Euler(0.0f, 80.0f, 0.0f);
+        transform.rotation = Quaternion.LookRotation(pos - tartgetPos[PosCounter + 10]) * Quaternion.Euler(0.0f, 80.0f, 0.0f);
     }
 
 
     public void Rewind()
     {
 
-        timer = timer - 5;
-        PosCounter = PosCounter - 5;
+        timer = timer - 10;
+        PosCounter = PosCounter - 10;
         startPos = tartgetPos[PosCounter];
         pos = tartgetPos[PosCounter + 1];
-        videoPlayer.time = videotime - 5;
+        videoPlayer.time = videotime - 10;
         transform.position = pos;
-        transform.rotation = Quaternion.LookRotation(pos - tartgetPos[PosCounter + 5]) * Quaternion.Euler(0.0f, 80.0f, 0.0f);
+        transform.rotation = Quaternion.LookRotation(pos - tartgetPos[PosCounter + 10]) * Quaternion.Euler(0.0f, 80.0f, 0.0f);
     }
 
     public Vector3 PointOnCurve(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3, float t)
@@ -244,6 +246,54 @@ public class test2 : MonoBehaviour
 
         return newTargetPos;
     }
+
+
+
+
+    public void speedup()
+    {
+
+        
+        timetemp2=timetemp2+timetemp;
+        videoPlayer.playbackSpeed = timetemp2;
+        travelTime = (travelTime / 2);
+    }
+
+    public void normaltime()
+    {
+        timetemp2 = 1f;
+        travelTime = 1f;
+        videoPlayer.playbackSpeed = 1f;
+
+
+    }
+
+    public void Fastfowardm()
+    {
+        timer = timer + 60;
+        PosCounter = PosCounter + 60;
+        startPos = tartgetPos[PosCounter];
+        pos = tartgetPos[PosCounter + 1];
+        videoPlayer.time = videotime + 60;
+        transform.position = pos;
+        transform.rotation = Quaternion.LookRotation(pos - tartgetPos[PosCounter + 60]) * Quaternion.Euler(0.0f, 80.0f, 0.0f);
+    }
+
+
+    public void Rewindm()
+    {
+
+        timer = timer - 60;
+        PosCounter = PosCounter - 60;
+        startPos = tartgetPos[PosCounter];
+        pos = tartgetPos[PosCounter + 1];
+        videoPlayer.time = videotime - 60;
+        transform.position = pos;
+        transform.rotation = Quaternion.LookRotation(pos - tartgetPos[PosCounter + 60]) * Quaternion.Euler(0.0f, 80.0f, 0.0f);
+    }
+
+
+
 }
 
 

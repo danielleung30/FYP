@@ -29,6 +29,13 @@ public class Instantiate_Obj : MonoBehaviour
             if (www.isNetworkError || www.isHttpError)
             {
                 Debug.Log(www.error);
+                String data = System.IO.File.ReadAllText(Application.persistentDataPath + "ObjectData.txt");
+                RootObject[] markers = JsonHelper.getJsonArray<RootObject>(data);
+
+                instantObj(markers);
+
+                Destroy(SpawnMarker);
+                done = true;
             }
             else
             {
@@ -36,25 +43,13 @@ public class Instantiate_Obj : MonoBehaviour
                 {
                     string jsonResult = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data);
                     Debug.Log(jsonResult);
-                    RootObject[] markers = JsonHelper.getJsonArray<RootObject>(jsonResult);
+                    System.IO.File.WriteAllText(Application.persistentDataPath + "ObjectData.txt", jsonResult);
+                    String data =  System.IO.File.ReadAllText(Application.persistentDataPath + "ObjectData.txt");
+                    RootObject[] markers = JsonHelper.getJsonArray<RootObject>(data);
                     Debug.Log(markers.Length);
-                    foreach (var marker in markers) {
-                        //SpawnMarker.GetComponent<TextMesh>().text = marker.TITLE;
-                        SpawnMarker.GetComponentInChildren<TextMesh>().text = "";
-                        SpawnMarker.GetComponentInChildren<TextMesh>().name = marker.TITLE;
-                        SpawnMarker.name = marker.TITLE;
-                        SpawnMarker.tag = "marker";
-                        TextContainer.GetComponentInChildren<Text>().text = marker.DESCRIPTION;
 
-                        float longitude = float.Parse(marker.LONGITUDE);
-                        float latitude = float.Parse(marker.LATITUDE);
-                        Debug.Log(longitude + "//" + latitude);
-                        //Vector3 pos = new Vector3(600,200,500);                        
-                        Instantiate(SpawnMarker, WGS84toWebMercator(longitude, latitude, 150), Instantiate_Position.transform.rotation);
-                        // Debug.Log(marker.TITLE);
-                        // Debug.Log(marker.LATITUDE);
-                        // Debug.Log(marker.LONGITUDE);
-                    } 
+                    instantObj(markers);
+
                     Destroy(SpawnMarker);
                     done = true;
                 }
@@ -82,6 +77,31 @@ public class Instantiate_Obj : MonoBehaviour
         return new Vector3((float)x, y, (float)z);
     }
 
+
+
+    void instantObj(RootObject[] markers) {
+
+        foreach (var marker in markers)
+        {
+            //SpawnMarker.GetComponent<TextMesh>().text = marker.TITLE;
+            SpawnMarker.GetComponentInChildren<TextMesh>().text = "";
+            SpawnMarker.GetComponentInChildren<TextMesh>().name = marker.TITLE;
+            SpawnMarker.name = marker.TITLE;
+            SpawnMarker.tag = marker.TYPE;
+            TextContainer.GetComponentInChildren<Text>().text = marker.DESCRIPTION;
+
+            float longitude = float.Parse(marker.LONGITUDE);
+            float latitude = float.Parse(marker.LATITUDE);
+            Debug.Log(longitude + "//" + latitude);
+            //Vector3 pos = new Vector3(600,200,500);                        
+            Instantiate(SpawnMarker, WGS84toWebMercator(longitude, latitude, 150), Instantiate_Position.transform.rotation);
+            // Debug.Log(marker.TITLE);
+            // Debug.Log(marker.LATITUDE);
+            // Debug.Log(marker.LONGITUDE);
+        }
+
+
+    }
 
 
 }
